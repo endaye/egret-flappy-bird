@@ -4,7 +4,7 @@ class Bird extends egret.DisplayObjectContainer {
     private birdAnim: dragonBones.EgretArmatureDisplay;
 
     private static readonly gravity = 9.8;
-    private velocity: number = 0;
+    private velocity: number;
     private scale: number = 3;
     private timeOnEnterFrame: number = 0;
     private deltaTime: number = 0;
@@ -22,7 +22,6 @@ class Bird extends egret.DisplayObjectContainer {
         this.birdAnim.scaleX = this.scale;
         this.birdAnim.scaleY = this.scale;
         this.reset();
-        this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
     }
 
     public static get Instance() {
@@ -32,27 +31,22 @@ class Bird extends egret.DisplayObjectContainer {
     public reset() {
         this.x = 0;
         this.y = 0;
-        this.velocity = 0;
+        this.velocity = 50;
     }
 
     public fly() {
         this.birdAnim.animation.play("fly");
+        egret.startTick(this.fall, this);
     }
 
     public stand() {
         this.birdAnim.animation.stop();
     }
 
-    private onEnterFrame(e: egret.Event) {
-        let now = egret.getTimer();
-        let time = this.timeOnEnterFrame;
-        this.deltaTime = now - time;
-        // this.fall(this.deltaTime);
-        this.timeOnEnterFrame = egret.getTimer();
-    }
-
-    private fall(deltaTime: number) {
-        this.velocity += 9.8 * deltaTime;
-        this.y += this.velocity * deltaTime;
+    private fall(deltaTime: number): boolean {
+        deltaTime *= .001;
+        this.y += this.velocity * deltaTime * 0.1;
+        this.velocity += Bird.gravity * deltaTime * 0.1;
+        return false;
     }
 }
