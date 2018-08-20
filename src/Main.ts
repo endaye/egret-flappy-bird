@@ -90,11 +90,13 @@ class Main extends egret.DisplayObjectContainer {
      */
     private createGameScene() {
         let sky = this.createBitmapByName("bg_day_png");
-        this.addChild(sky);
+        // this.addChild(sky);
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
+
+
 
         let topMask = new egret.Shape();
         topMask.graphics.beginFill(0x000000, 0.5);
@@ -137,6 +139,18 @@ class Main extends egret.DisplayObjectContainer {
         textfield.x = 172;
         textfield.y = 135;
         this.textfield = textfield;
+
+        let birdSkeleton = RES.getRes("bird_ske_json");
+        let birdTexture = RES.getRes("bird_tex_png")
+        let birdTextureData = RES.getRes("bird_tex_json");
+        let dbFactory: dragonBones.EgretFactory = new dragonBones.EgretFactory();
+        dbFactory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(birdSkeleton));
+        dbFactory.addTextureAtlas(new dragonBones.EgretTextureAtlas(birdTexture, birdTextureData));
+        let birdAnim: dragonBones.EgretArmatureDisplay = dbFactory.buildArmatureDisplay("Bird01");
+        this.addChild(birdAnim);
+        birdAnim.x = stageW * .5;
+        birdAnim.y = stageH * .5;
+        birdAnim.animation.play("newAnimation")
     }
 
     /**
@@ -178,5 +192,7 @@ class Main extends egret.DisplayObjectContainer {
         };
 
         change();
+
+
     }
 }
