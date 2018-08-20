@@ -95,19 +95,11 @@ class Main extends egret.DisplayObjectContainer {
         sky.width = stageW;
         sky.height = stageH;
 
-        let birdSkeleton = RES.getRes("bird_ske_json");
-        let birdTexture = RES.getRes("bird_tex_png")
-        let birdTextureData = RES.getRes("bird_tex_json");
-        let dbFactory: dragonBones.EgretFactory = new dragonBones.EgretFactory();
-        dbFactory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(birdSkeleton));
-        dbFactory.addTextureAtlas(new dragonBones.EgretTextureAtlas(birdTexture, birdTextureData));
-        let birdAnim: dragonBones.EgretArmatureDisplay = dbFactory.buildArmatureDisplay("Bird");
-        this.addChild(birdAnim);
-        birdAnim.x = stageW * .5;
-        birdAnim.y = stageH * .5;
-        birdAnim.scaleX = 3;
-        birdAnim.scaleY = 3;
-        birdAnim.animation.play("fly");
+        let bird = Bird.Instance;
+        bird.x = stageW * .5;
+        bird.y = stageH * .4;
+        this.addChild(bird);
+        bird.fly();
     }
 
     /**
