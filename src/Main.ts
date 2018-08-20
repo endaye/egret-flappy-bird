@@ -57,9 +57,6 @@ class Main extends egret.DisplayObjectContainer {
         this.runGame().catch(e => {
             console.log(e);
         })
-
-
-
     }
 
     private async runGame() {
@@ -70,7 +67,6 @@ class Main extends egret.DisplayObjectContainer {
         await platform.login();
         const userInfo = await platform.getUserInfo();
         console.log(userInfo);
-
     }
 
     private async loadResource() {
@@ -121,7 +117,6 @@ class Main extends egret.DisplayObjectContainer {
         line.y = 61;
         this.addChild(line);
 
-
         let colorLabel = new egret.TextField();
         colorLabel.textColor = 0xffffff;
         colorLabel.width = stageW - 172;
@@ -142,8 +137,6 @@ class Main extends egret.DisplayObjectContainer {
         textfield.x = 172;
         textfield.y = 135;
         this.textfield = textfield;
-
-
     }
 
     /**
