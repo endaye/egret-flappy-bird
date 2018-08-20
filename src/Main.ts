@@ -90,13 +90,11 @@ class Main extends egret.DisplayObjectContainer {
      */
     private createGameScene() {
         let sky = this.createBitmapByName("bg_day_png");
-        // this.addChild(sky);
+        this.addChild(sky);
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
-
-
 
         let topMask = new egret.Shape();
         topMask.graphics.beginFill(0x000000, 0.5);
@@ -146,11 +144,13 @@ class Main extends egret.DisplayObjectContainer {
         let dbFactory: dragonBones.EgretFactory = new dragonBones.EgretFactory();
         dbFactory.addSkeletonData(dragonBones.DataParser.parseDragonBonesData(birdSkeleton));
         dbFactory.addTextureAtlas(new dragonBones.EgretTextureAtlas(birdTexture, birdTextureData));
-        let birdAnim: dragonBones.EgretArmatureDisplay = dbFactory.buildArmatureDisplay("Bird01");
+        let birdAnim: dragonBones.EgretArmatureDisplay = dbFactory.buildArmatureDisplay("Bird");
         this.addChild(birdAnim);
         birdAnim.x = stageW * .5;
         birdAnim.y = stageH * .5;
-        birdAnim.animation.play("newAnimation")
+        birdAnim.scaleX = 2;
+        birdAnim.scaleY = 2;
+        birdAnim.animation.play("fly");
     }
 
     /**

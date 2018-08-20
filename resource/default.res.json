@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_png,bird_tex_json,bird_ske_json,bird_tex2_json,bird_tex2_png,bird_ske2_json",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json",
 			"name": "preload"
 		}
 	],
@@ -47,32 +47,17 @@
 			"name": "bird0_1_png"
 		},
 		{
-			"url": "assets/animations/bird_tex.png",
-			"type": "image",
-			"name": "bird_tex_png"
-		},
-		{
-			"url": "assets/animations/bird_ske.json",
-			"type": "json",
-			"name": "bird_ske_json"
-		},
-		{
-			"url": "assets/animations/bird_tex.json",
-			"type": "json",
-			"name": "bird_tex_json"
-		},
-		{
-			"name": "bird_tex2_json",
+			"name": "bird_tex_json",
 			"type": "json",
 			"url": "assets/animations/bird_tex.json"
 		},
 		{
-			"name": "bird_tex2_png",
+			"name": "bird_tex_png",
 			"type": "image",
 			"url": "assets/animations/bird_tex.png"
 		},
 		{
-			"name": "bird_ske2_json",
+			"name": "bird_ske_json",
 			"type": "json",
 			"url": "assets/animations/bird_ske.json"
 		}
