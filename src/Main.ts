@@ -75,6 +75,7 @@ class Main extends egret.DisplayObjectContainer {
             await RES.loadConfig("resource/default.res.json", "resource/");
             await RES.loadGroup("preload", 0, loadingView);
             this.stage.removeChild(loadingView);
+
         }
         catch (e) {
             console.error(e);
@@ -89,7 +90,7 @@ class Main extends egret.DisplayObjectContainer {
      */
     private createGameScene() {
         let sky = this.createBitmapByName("bg_day_png");
-        this.addChild(sky);
+        // this.addChild(sky);
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
@@ -98,8 +99,19 @@ class Main extends egret.DisplayObjectContainer {
         let bird = Bird.Instance;
         bird.x = stageW * .5;
         bird.y = stageH * .4;
-        this.addChild(bird);
         bird.fly();
+        bird.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird);
+        this.addChild(bird);
+
+        let touchPanel: egret.Shape = new egret.Shape();
+        touchPanel.graphics.beginFill(0xff0000, 0.1);
+        touchPanel.graphics.drawRect(-2, -2, stageW + 2, stageH + 2);
+        touchPanel.graphics.endFill();
+        this.addChild(touchPanel);
+        touchPanel.width = stageW;
+        touchPanel.height = stageH;
+        touchPanel.$touchEnabled = true;
+        touchPanel.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird);
     }
 
     /**

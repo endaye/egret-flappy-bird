@@ -22,24 +22,26 @@ class Bird extends egret.DisplayObjectContainer {
         this.birdAnim.scaleX = this.scale;
         this.birdAnim.scaleY = this.scale;
         this.reset();
+        this.width = 200;
+        this.height = 200;
     }
 
-    public static get Instance() {
+    public static get Instance(): Bird {
         return this._instance || (this._instance = new this());
     }
 
-    public reset() {
+    public reset(): void {
         this.x = 0;
         this.y = 0;
         this.velocity = 50;
     }
 
-    public fly() {
+    public fly(): void {
         this.birdAnim.animation.play("fly");
-        egret.startTick(this.fall, this);
+        // egret.startTick(this.fall, this);
     }
 
-    public stand() {
+    public stand(): void {
         this.birdAnim.animation.stop();
     }
 
@@ -48,5 +50,9 @@ class Bird extends egret.DisplayObjectContainer {
         this.y += this.velocity * deltaTime * 0.1;
         this.velocity += Bird.gravity * deltaTime * 0.1;
         return false;
+    }
+
+    public jump(e: egret.TouchEvent) {
+        console.log("Jump");
     }
 }
