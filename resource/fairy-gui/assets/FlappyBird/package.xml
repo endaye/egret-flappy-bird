@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fgk4oazd" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="q3x40" name="font_048.png" path="/Font/"/>
+    <image id="q3x41" name="font_049.png" path="/Font/"/>
+    <image id="q3x42" name="font_050.png" path="/Font/"/>
+    <image id="q3x43" name="font_051.png" path="/Font/"/>
+    <image id="q3x44" name="font_052.png" path="/Font/"/>
+    <image id="q3x45" name="font_053.png" path="/Font/"/>
+    <image id="q3x46" name="font_054.png" path="/Font/"/>
+    <image id="q3x47" name="font_055.png" path="/Font/"/>
+    <image id="q3x48" name="font_056.png" path="/Font/"/>
+    <image id="q3x49" name="font_057.png" path="/Font/"/>
+    <font id="q3x4a" name="Flappy.fnt" path="/" exported="true"/>
+    <component id="q3x4b" name="Running.xml" path="/"/>
+    <image id="q3x4c" name="button_menu.png" path="/GUI/"/>
+    <image id="q3x4d" name="button_ok.png" path="/GUI/"/>
+    <image id="q3x4e" name="button_pause.png" path="/GUI/"/>
+    <image id="q3x4f" name="button_play.png" path="/GUI/"/>
+    <image id="q3x4g" name="button_rate.png" path="/GUI/"/>
+    <image id="q3x4h" name="button_resume.png" path="/GUI/"/>
+    <image id="q3x4i" name="button_score.png" path="/GUI/"/>
+    <image id="q3x4j" name="button_share.png" path="/GUI/"/>
+    <image id="q3x4k" name="land.png" path="/GUI/"/>
+    <image id="q3x4l" name="medals_0.png" path="/GUI/"/>
+    <image id="q3x4m" name="medals_1.png" path="/GUI/"/>
+    <image id="q3x4n" name="medals_2.png" path="/GUI/"/>
+    <image id="q3x4o" name="medals_3.png" path="/GUI/"/>
+    <image id="q3x4p" name="new.png" path="/GUI/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>
