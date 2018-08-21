@@ -27,6 +27,7 @@
     <image id="q3x4n" name="medals_2.png" path="/GUI/"/>
     <image id="q3x4o" name="medals_3.png" path="/GUI/"/>
     <image id="q3x4p" name="new.png" path="/GUI/"/>
+    <component id="q3x4q" name="StartMemu.xml" path="/"/>
   </resources>
   <publish name=""/>
 </packageDescription>
