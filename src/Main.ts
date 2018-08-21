@@ -29,8 +29,6 @@
 
 class Main extends egret.DisplayObjectContainer {
 
-
-
     public constructor() {
         super();
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
@@ -83,6 +81,7 @@ class Main extends egret.DisplayObjectContainer {
     }
 
     private textfield: egret.TextField;
+    private flyUI: fairygui.GComponent;
 
     /**
      * 创建游戏场景
@@ -100,18 +99,13 @@ class Main extends egret.DisplayObjectContainer {
         bird.x = stageW * .5;
         bird.y = stageH * .4;
         bird.fly();
-        bird.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird);
         this.addChild(bird);
 
-        let touchPanel: egret.Shape = new egret.Shape();
-        touchPanel.graphics.beginFill(0xff0000, 0);
-        touchPanel.graphics.drawRect(-2, -2, stageW + 2, stageH + 2);
-        touchPanel.graphics.endFill();
-        this.addChild(touchPanel);
-        touchPanel.width = stageW;
-        touchPanel.height = stageH;
-        touchPanel.$touchEnabled = true;
-        touchPanel.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird);
+        fairygui.UIPackage.addPackage("FlappyBird");
+        this.flyUI = <fairygui.GComponent>fairygui.UIPackage.createObject("FlappyBird","Running");
+        this.stage.addChild(fairygui.GRoot.inst.displayObject);
+        fairygui.GRoot.inst.addChild(this.flyUI);
+        fairygui.GRoot.inst.displayObject.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird, true);
     }
 
     /**

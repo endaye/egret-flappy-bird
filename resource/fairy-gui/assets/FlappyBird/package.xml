@@ -12,7 +12,7 @@
     <image id="q3x48" name="font_056.png" path="/Font/"/>
     <image id="q3x49" name="font_057.png" path="/Font/"/>
     <font id="q3x4a" name="Flappy.fnt" path="/" exported="true"/>
-    <component id="q3x4b" name="Running.xml" path="/"/>
+    <component id="q3x4b" name="Running.xml" path="/" exported="true"/>
     <image id="q3x4c" name="button_menu.png" path="/GUI/"/>
     <image id="q3x4d" name="button_ok.png" path="/GUI/"/>
     <image id="q3x4e" name="button_pause.png" path="/GUI/"/>
@@ -28,6 +28,8 @@
     <image id="q3x4o" name="medals_3.png" path="/GUI/"/>
     <image id="q3x4p" name="new.png" path="/GUI/"/>
     <component id="q3x4q" name="StartMemu.xml" path="/"/>
+    <image id="q3x4r" name="title.png" path="/GUI/"/>
+    <image id="q3x4s" name="brand_copyright.png" path="/GUI/"/>
   </resources>
-  <publish name=""/>
+  <publish name="FlappyBird" genCode="true"/>
 </packageDescription>

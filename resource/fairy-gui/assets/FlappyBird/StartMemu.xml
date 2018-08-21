@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="400,400"/>
+<component size="750,1334">
+  <displayList>
+    <image id="n0_q3x4" name="score board" src="q3x4i" fileName="GUI/button_score.png" xy="362,784" scale="3,3"/>
+    <image id="n1_q3x4" name="rate" src="q3x4g" fileName="GUI/button_rate.png" xy="266,522" aspect="true" scale="3,3"/>
+    <image id="n2_q3x4" name="play" src="q3x4f" fileName="GUI/button_play.png" xy="49,784" aspect="true" scale="3,3"/>
+    <image id="n3_q3x4" name="logo" src="q3x4r" fileName="GUI/title.png" xy="110,227" aspect="true" scale="3,3"/>
+    <image id="n4_q3x4" name="copyright" src="q3x4s" fileName="GUI/brand_copyright.png" xy="198,1152" aspect="true" scale="3,3"/>
+  </displayList>
+</component>

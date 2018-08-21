@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json,sfx_die_wav,sfx_hit_wav,sfx_point_wav,sfx_swooshing_wav,sfx_wing_wav",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json,sfx_die_wav,sfx_hit_wav,sfx_point_wav,sfx_swooshing_wav,sfx_wing_wav,Publish_json,FlappyBird@atlas0_png,FlappyBird,workspace_json",
 			"name": "preload"
 		}
 	],
@@ -85,6 +85,26 @@
 			"url": "assets/sounds/sfx_wing.wav",
 			"type": "sound",
 			"name": "sfx_wing_wav"
+		},
+		{
+			"url": "fairy-gui/settings/Publish.json",
+			"type": "json",
+			"name": "Publish_json"
+		},
+		{
+			"url": "assets/fgui/FlappyBird@atlas0.png",
+			"type": "image",
+			"name": "FlappyBird@atlas0_png"
+		},
+		{
+			"url": "assets/fgui/FlappyBird.fui",
+			"type": "bin",
+			"name": "FlappyBird"
+		},
+		{
+			"name": "workspace_json",
+			"type": "json",
+			"url": "fairy-gui/.objs/workspace.json"
 		}
 	]
 }
