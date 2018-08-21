@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json,sfx_die_wav,sfx_hit_wav,sfx_point_wav,sfx_swooshing_wav,sfx_wing_wav",
 			"name": "preload"
 		}
 	],
@@ -47,19 +47,44 @@
 			"name": "bird0_1_png"
 		},
 		{
-			"name": "bird_tex_json",
+			"url": "assets/animations/bird_tex.json",
 			"type": "json",
-			"url": "assets/animations/bird_tex.json"
+			"name": "bird_tex_json"
 		},
 		{
-			"name": "bird_tex_png",
+			"url": "assets/animations/bird_tex.png",
 			"type": "image",
-			"url": "assets/animations/bird_tex.png"
+			"name": "bird_tex_png"
 		},
 		{
-			"name": "bird_ske_json",
+			"url": "assets/animations/bird_ske.json",
 			"type": "json",
-			"url": "assets/animations/bird_ske.json"
+			"name": "bird_ske_json"
+		},
+		{
+			"url": "assets/sounds/sfx_die.wav",
+			"type": "sound",
+			"name": "sfx_die_wav"
+		},
+		{
+			"url": "assets/sounds/sfx_hit.wav",
+			"type": "sound",
+			"name": "sfx_hit_wav"
+		},
+		{
+			"url": "assets/sounds/sfx_point.wav",
+			"type": "sound",
+			"name": "sfx_point_wav"
+		},
+		{
+			"url": "assets/sounds/sfx_swooshing.wav",
+			"type": "sound",
+			"name": "sfx_swooshing_wav"
+		},
+		{
+			"url": "assets/sounds/sfx_wing.wav",
+			"type": "sound",
+			"name": "sfx_wing_wav"
 		}
 	]
 }

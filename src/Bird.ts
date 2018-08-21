@@ -10,6 +10,8 @@ class Bird extends egret.DisplayObjectContainer {
     private timeOnEnterFrame: number = 0;
     private time: number = 0;
 
+    private sfxWing: egret.Sound;
+
     private constructor() {
         super();
         const birdSkeleton: dragonBones.DragonBonesData = RES.getRes("bird_ske_json");
@@ -25,6 +27,8 @@ class Bird extends egret.DisplayObjectContainer {
         this.reset();
         this.width = 200;
         this.height = 200;
+
+        this.sfxWing = RES.getRes("sfx_wing_wav");
     }
 
     public static get Instance(): Bird {
@@ -58,5 +62,6 @@ class Bird extends egret.DisplayObjectContainer {
 
     public jump(e: egret.TouchEvent) {
         this.velocity = Bird.jumpSpeed;
+        this.sfxWing.play(0, 1);
     }
 }
