@@ -90,7 +90,7 @@ class Main extends egret.DisplayObjectContainer {
      */
     private createGameScene() {
         let sky = this.createBitmapByName("bg_day_png");
-        // this.addChild(sky);
+        this.addChild(sky);
         let stageW = this.stage.stageWidth;
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
@@ -104,7 +104,7 @@ class Main extends egret.DisplayObjectContainer {
         this.addChild(bird);
 
         let touchPanel: egret.Shape = new egret.Shape();
-        touchPanel.graphics.beginFill(0xff0000, 0.1);
+        touchPanel.graphics.beginFill(0xff0000, 0);
         touchPanel.graphics.drawRect(-2, -2, stageW + 2, stageH + 2);
         touchPanel.graphics.endFill();
         this.addChild(touchPanel);

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json,sfx_die_wav,sfx_hit_wav,sfx_point_wav,sfx_swooshing_wav,sfx_wing_wav,font_048_png,font_049_png,font_050_png,font_051_png,font_052_png,font_053_png,font_054_png,font_055_png,font_056_png,font_057_png,Flappy_fnt",
+			"keys": "bg_jpg,egret_icon_png,description_json,bg_day_png,bg_night_png,bird0_2_png,bird0_0_png,bird0_1_png,bird_tex_json,bird_tex_png,bird_ske_json,sfx_die_wav,sfx_hit_wav,sfx_point_wav,sfx_swooshing_wav,sfx_wing_wav",
 			"name": "preload"
 		}
 	],
@@ -85,61 +85,6 @@
 			"url": "assets/sounds/sfx_wing.wav",
 			"type": "sound",
 			"name": "sfx_wing_wav"
-		},
-		{
-			"name": "font_048_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_048.png"
-		},
-		{
-			"name": "font_049_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_049.png"
-		},
-		{
-			"name": "font_050_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_050.png"
-		},
-		{
-			"name": "font_051_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_051.png"
-		},
-		{
-			"name": "font_052_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_052.png"
-		},
-		{
-			"name": "font_053_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_053.png"
-		},
-		{
-			"name": "font_054_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_054.png"
-		},
-		{
-			"name": "font_055_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_055.png"
-		},
-		{
-			"name": "font_056_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_056.png"
-		},
-		{
-			"name": "font_057_png",
-			"type": "image",
-			"url": "fairy-gui/assets/FlappyBird/Font/font_057.png"
-		},
-		{
-			"name": "Flappy_fnt",
-			"type": "font",
-			"url": "fairy-gui/assets/FlappyBird/Flappy.fnt"
 		}
 	]
 }
