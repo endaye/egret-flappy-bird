@@ -31,5 +31,5 @@
     <image id="q3x4r" name="title.png" path="/GUI/"/>
     <image id="q3x4s" name="brand_copyright.png" path="/GUI/"/>
   </resources>
-  <publish name="FlappyBird" genCode="true"/>
+  <publish name="FlappyBird"/>
 </packageDescription>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="750,1334">
+<component size="750,1334" opaque="false">
   <displayList>
-    <text id="n0_q3x4" name="Score" xy="375,356" pivot="0.5,0.5" anchor="true" size="586,129" font="ui://fgk4oazdq3x4a" fontSize="34" align="center" vAlign="middle" leading="1" letterSpacing="25" strokeColor="#33ff00" strokeSize="80" text="1231345"/>
+    <graph id="n3_lx0e" name="n3" xy="180,533" size="432,162" visible="false" type="rect" lineSize="0" lineColor="#00000000" fillColor="#70ffffff"/>
   </displayList>
 </component>
