@@ -64,4 +64,14 @@ class Bird extends egret.DisplayObjectContainer {
         this.velocity = Bird.jumpSpeed;
         this.sfxWing.play(0, 1);
     }
+
+    public sprint(e: egret.TouchEvent) {
+        this.x += 50;
+        this.sfxWing.play(0, 1);
+    }
+
+    public sprintBack(e: egret.TouchEvent) {
+        this.x -= 50;
+        this.sfxWing.play(0, 1);
+    }
 }
