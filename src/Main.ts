@@ -82,6 +82,7 @@ class Main extends egret.DisplayObjectContainer {
 
     private textfield: egret.TextField;
     private flyUI: fairygui.GComponent;
+    private context: egret.Sprite;
 
     /**
      * 创建游戏场景
@@ -94,6 +95,7 @@ class Main extends egret.DisplayObjectContainer {
         let stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
+        sky.filters
 
         let bird = Bird.Instance;
         bird.x = stageW * .5;
@@ -102,10 +104,46 @@ class Main extends egret.DisplayObjectContainer {
         this.addChild(bird);
 
         fairygui.UIPackage.addPackage("FlappyBird");
-        this.flyUI = <fairygui.GComponent>fairygui.UIPackage.createObject("FlappyBird","Running");
+        this.flyUI = <fairygui.GComponent>fairygui.UIPackage.createObject("FlappyBird", "Running");
         this.stage.addChild(fairygui.GRoot.inst.displayObject);
         fairygui.GRoot.inst.addChild(this.flyUI);
-        fairygui.GRoot.inst.displayObject.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird, true);
+        let n3 = this.flyUI.getChild("n3");
+        n3.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.sprint, bird);
+
+
+        // this.context = new egret.Sprite();
+
+
+        let pad1: egret.Shape = new egret.Shape();
+        // pad1.$setHeight(1334);
+        // pad1.$setWidth(750);
+        // pad1.$setX(0);
+        // pad1.$setY(0);
+        pad1.graphics.beginFill(0xff0000, 0.5);
+        pad1.graphics.lineStyle(10, 0x000000, 0.1);
+        pad1.graphics.drawRect(40, 40, 222  , 333);
+        pad1.graphics.endFill();
+        pad1.touchEnabled = true;
+        pad1.alpha = 0;
+        
+        this.addChild(pad1);
+        pad1.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.sprintBack, bird);
+
+        // let pad2: egret.Shape = new egret.Shape();
+        // pad2.graphics.beginFill(0x00ff00, 0.5);
+        // pad2.graphics.lineStyle(10, 0x000000, 0.1);
+        // pad2.graphics.drawRect(stageW * 0.5 + 40, 40, stageW * 0.5 - 80, stageH * 0.5 - 80);
+        // pad2.graphics.endFill();
+        // pad2.touchEnabled = true;
+        // this.context.addChild(pad2);
+        // // this.addChild(pad2);
+        // pad2.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.sprint, bird);
+
+        // this.addChild(this.context);
+        // this.context.cacheAsBitmap = true;
+
+
+        // fairygui.GRoot.inst.displayObject.addEventListener(egret.TouchEvent.TOUCH_TAP, bird.jump, bird, true);
     }
 
     /**
